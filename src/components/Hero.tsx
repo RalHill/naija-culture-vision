@@ -1,13 +1,13 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Building, Flag } from "lucide-react";
+import { ArrowRight, Building, Calendar, Flag } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="pt-24 pb-12 px-4 md:pt-32 md:pb-16 md:px-8 lg:px-12 bg-gradient-to-b from-naija-lightgreen to-white relative">
       {/* Hero background image with overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-15 z-0"
+        className="absolute inset-0 bg-cover bg-center opacity-20 z-0"
         style={{ 
           backgroundImage: "url('https://images.unsplash.com/photo-1577495581456-93f33e6a0a77?q=80&w=1000')", 
           backgroundBlendMode: "overlay" 
@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
           
           <p className="text-xl md:text-2xl font-medium text-gray-700 mb-8 max-w-xl mx-auto">
-            Explore, Attend, and Invest in Nigeria
+            Explore. Attend. Invest.
           </p>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
