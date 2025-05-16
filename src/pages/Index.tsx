@@ -5,7 +5,6 @@ import NewsSection from "@/components/NewsSection";
 import CulturalDirectory from "@/components/CulturalDirectory";
 import EventHighlights from "@/components/EventHighlights";
 import InvestmentHub from "@/components/InvestmentHub";
-import MapView from "@/components/MapView";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,7 +15,6 @@ const Index = () => {
         <Hero />
         <NewsSection />
         <CulturalDirectory />
-        <MapView />
         <EventHighlights />
         <InvestmentHub />
       </main>

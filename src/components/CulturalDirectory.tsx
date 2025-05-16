@@ -2,9 +2,11 @@
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Landmark, Search, Filter, Map } from "lucide-react";
+import { ArrowRight, MapPin, Landmark, Search, Filter, Map, Layers } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 interface CulturalSpot {
   id: number;
@@ -139,6 +141,31 @@ const CulturalDirectory = () => {
   const [selectedState, setSelectedState] = useState("All States");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [showMap, setShowMap] = useState(false);
+  const [mapLoaded, setMapLoaded] = useState(false);
+  const [filters, setFilters] = useState({
+    museums: true,
+    galleries: true,
+    heritage: true,
+    monuments: true,
+    festivals: true,
+    markets: true
+  });
+
+  // Simulate map loading after 1 second
+  const loadMap = () => {
+    setTimeout(() => {
+      setMapLoaded(true);
+    }, 1000);
+  };
+
+  // Toggle the map view and load map when first switched to map view
+  const handleToggleView = () => {
+    const newShowMap = !showMap;
+    setShowMap(newShowMap);
+    if (newShowMap && !mapLoaded) {
+      loadMap();
+    }
+  };
 
   const categories = [
     { id: "all", name: "All Categories" },
@@ -149,6 +176,23 @@ const CulturalDirectory = () => {
     { id: "festival", name: "Festivals" },
     { id: "market", name: "Markets" }
   ];
+  
+  const regions = [
+    { id: "all", name: "All Regions" },
+    { id: "north-central", name: "North Central" },
+    { id: "north-east", name: "North East" },
+    { id: "north-west", name: "North West" },
+    { id: "south-east", name: "South East" },
+    { id: "south-south", name: "South South" },
+    { id: "south-west", name: "South West" }
+  ];
+  
+  const toggleFilter = (filterName: keyof typeof filters) => {
+    setFilters(prev => ({
+      ...prev,
+      [filterName]: !prev[filterName]
+    }));
+  };
 
   const filteredSpots = culturalSpots.filter(spot => {
     // Filter by search query
@@ -161,7 +205,20 @@ const CulturalDirectory = () => {
     // Filter by category
     const categoryMatch = selectedCategory === "all" || spot.category === selectedCategory;
     
-    return searchMatch && stateMatch && categoryMatch;
+    // Apply map filters if showing map
+    let mapFilterMatch = true;
+    if (showMap) {
+      mapFilterMatch = (
+        (spot.category === "museum" && filters.museums) ||
+        (spot.category === "gallery" && filters.galleries) ||
+        (spot.category === "heritage" && filters.heritage) ||
+        (spot.category === "monument" && filters.monuments) ||
+        (spot.category === "festival" && filters.festivals) ||
+        (spot.category === "market" && filters.markets)
+      );
+    }
+    
+    return searchMatch && stateMatch && categoryMatch && mapFilterMatch;
   });
 
   return (
@@ -176,7 +233,7 @@ const CulturalDirectory = () => {
             <Button 
               variant={showMap ? "outline" : "secondary"}
               className={`flex items-center gap-2 ${showMap ? "border-naija-gold text-naija-gold" : "bg-naija-gold text-black"}`}
-              onClick={() => setShowMap(!showMap)}
+              onClick={handleToggleView}
             >
               {showMap ? "List View" : "Map View"} 
               {showMap ? <Landmark className="h-4 w-4" /> : <Map className="h-4 w-4" />}
@@ -225,13 +282,177 @@ const CulturalDirectory = () => {
         </div>
         
         {showMap ? (
-          <div className="h-[500px] w-full bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-            <div className="text-center">
-              <Map className="h-12 w-12 text-naija-green mx-auto mb-2" />
-              <p className="text-lg font-semibold text-naija-green">Map View Coming Soon</p>
-              <p className="text-gray-600 max-w-md mx-auto mt-2">
-                Soon you'll be able to explore all cultural locations visually across Nigeria on an interactive map.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <div className="flex items-center gap-2 mb-4">
+                <Layers className="h-5 w-5 text-naija-green" />
+                <h3 className="font-semibold">Map Layers</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="dir-museums" 
+                    checked={filters.museums}
+                    onCheckedChange={() => toggleFilter("museums")}
+                  />
+                  <Label htmlFor="dir-museums">Museums</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="dir-galleries" 
+                    checked={filters.galleries}
+                    onCheckedChange={() => toggleFilter("galleries")}
+                  />
+                  <Label htmlFor="dir-galleries">Art Galleries</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="dir-heritage" 
+                    checked={filters.heritage}
+                    onCheckedChange={() => toggleFilter("heritage")}
+                  />
+                  <Label htmlFor="dir-heritage">Heritage Sites</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="dir-monuments" 
+                    checked={filters.monuments}
+                    onCheckedChange={() => toggleFilter("monuments")}
+                  />
+                  <Label htmlFor="dir-monuments">Monuments</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="dir-festivals" 
+                    checked={filters.festivals}
+                    onCheckedChange={() => toggleFilter("festivals")}
+                  />
+                  <Label htmlFor="dir-festivals">Festival Locations</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="dir-markets" 
+                    checked={filters.markets}
+                    onCheckedChange={() => toggleFilter("markets")}
+                  />
+                  <Label htmlFor="dir-markets">Cultural Markets</Label>
+                </div>
+              </div>
+              
+              <div className="mt-6 border-t border-gray-200 pt-4 space-y-3">
+                <h4 className="font-medium text-sm mb-2">Price Range</h4>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="dir-free" />
+                  <Label htmlFor="dir-free">Free Entry</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="dir-budget" />
+                  <Label htmlFor="dir-budget">Budget (₦0 - ₦2,000)</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="dir-mid" />
+                  <Label htmlFor="dir-mid">Mid-range (₦2,000 - ₦5,000)</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="dir-premium" />
+                  <Label htmlFor="dir-premium">Premium (₦5,000+)</Label>
+                </div>
+              </div>
+              
+              <div className="mt-6 border-t border-gray-200 pt-4 space-y-3">
+                <h4 className="font-medium text-sm mb-2">Accessibility</h4>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="dir-wheelchair" />
+                  <Label htmlFor="dir-wheelchair">Wheelchair Accessible</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="dir-parking" />
+                  <Label htmlFor="dir-parking">Parking Available</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="dir-public" />
+                  <Label htmlFor="dir-public">Public Transport</Label>
+                </div>
+              </div>
+              
+              <Button className="w-full bg-naija-green hover:bg-naija-green/90 text-white mt-6">
+                Apply Filters
+              </Button>
+            </div>
+            
+            <div className="md:col-span-3">
+              <div className="h-[600px] bg-gray-100 rounded-lg border border-gray-200 relative">
+                {!mapLoaded ? (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-12 h-12 border-4 border-naija-green border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                      <p className="text-naija-green font-medium">Loading interactive map...</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center h-full">
+                    <div className="text-center">
+                      <MapPin className="h-12 w-12 text-naija-green mx-auto mb-2" />
+                      <p className="text-lg font-semibold text-naija-green">Map Integration Ready</p>
+                      <p className="text-gray-600 max-w-md mx-auto mt-2">
+                        The interactive map displays {filteredSpots.length} cultural and tourism locations
+                        based on your selected filters.
+                      </p>
+                      <div className="mt-6">
+                        <Button className="bg-naija-gold hover:bg-naija-gold/90 text-black">
+                          Show My Location
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <div className="bg-gray-100 p-3 rounded flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                  <span className="text-xs">Museums</span>
+                  <span className="text-xs text-gray-500 ml-auto">
+                    ({culturalSpots.filter(spot => spot.category === "museum").length})
+                  </span>
+                </div>
+                <div className="bg-gray-100 p-3 rounded flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  <span className="text-xs">Heritage Sites</span>
+                  <span className="text-xs text-gray-500 ml-auto">
+                    ({culturalSpots.filter(spot => spot.category === "heritage").length})
+                  </span>
+                </div>
+                <div className="bg-gray-100 p-3 rounded flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                  <span className="text-xs">Art Galleries</span>
+                  <span className="text-xs text-gray-500 ml-auto">
+                    ({culturalSpots.filter(spot => spot.category === "gallery").length})
+                  </span>
+                </div>
+                <div className="bg-gray-100 p-3 rounded flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <span className="text-xs">Monuments</span>
+                  <span className="text-xs text-gray-500 ml-auto">
+                    ({culturalSpots.filter(spot => spot.category === "monument").length})
+                  </span>
+                </div>
+                <div className="bg-gray-100 p-3 rounded flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <span className="text-xs">Festivals</span>
+                  <span className="text-xs text-gray-500 ml-auto">
+                    ({culturalSpots.filter(spot => spot.category === "festival").length})
+                  </span>
+                </div>
+                <div className="bg-gray-100 p-3 rounded flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                  <span className="text-xs">Markets</span>
+                  <span className="text-xs text-gray-500 ml-auto">
+                    ({culturalSpots.filter(spot => spot.category === "market").length})
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         ) : (
@@ -261,6 +482,7 @@ const CulturalDirectory = () => {
                     variant="outline" 
                     size="sm"
                     className="h-8 text-xs border-naija-green text-naija-green hover:bg-naija-lightgreen"
+                    onClick={() => setShowMap(true)}
                   >
                     <Map className="h-3 w-3 mr-1" /> View on Map
                   </Button>
