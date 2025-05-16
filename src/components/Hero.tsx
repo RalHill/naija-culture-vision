@@ -4,8 +4,17 @@ import { ArrowRight, Calendar, Building, Flag } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="pt-24 pb-12 px-4 md:pt-32 md:pb-16 md:px-8 lg:px-12 bg-gradient-to-b from-naija-lightgreen to-white">
-      <div className="container mx-auto">
+    <section className="pt-24 pb-12 px-4 md:pt-32 md:pb-16 md:px-8 lg:px-12 bg-gradient-to-b from-naija-lightgreen to-white relative">
+      {/* Hero background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-15 z-0"
+        style={{ 
+          backgroundImage: "url('https://images.unsplash.com/photo-1577495581456-93f33e6a0a77?q=80&w=1000')", 
+          backgroundBlendMode: "overlay" 
+        }}
+      ></div>
+      
+      <div className="container mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-12 w-12 rounded-full bg-naija-green flex items-center justify-center">

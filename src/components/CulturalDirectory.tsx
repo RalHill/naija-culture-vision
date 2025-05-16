@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -28,7 +27,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Nike Art Gallery",
     state: "Lagos",
     city: "Lekki",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=600",
+    image: "https://images.unsplash.com/photo-1594733114071-bcbf0d7323bf?q=80&w=600",
     description: "Home to thousands of artworks from renowned and emerging Nigerian artists across various mediums including paintings, sculptures, and textiles.",
     category: "gallery",
     coordinates: {
@@ -41,7 +40,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "National Museum",
     state: "Lagos",
     city: "Onikan",
-    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&w=600",
+    image: "https://images.unsplash.com/photo-1554907984-89a3d7e84f1a?q=80&w=600",
     description: "Preserving Nigeria's cultural heritage with artifacts spanning centuries, including the famous Benin Bronzes and Nok terracottas.",
     category: "museum",
     coordinates: {
@@ -54,7 +53,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Osun Sacred Grove",
     state: "Osun",
     city: "Osogbo",
-    image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?q=80&w=600",
+    image: "https://images.unsplash.com/photo-1526489550178-7bd5d9944e4f?q=80&w=600",
     description: "UNESCO World Heritage site dedicated to the goddess of fertility, featuring ancient sculptures and sacred shrines within pristine forest.",
     category: "heritage",
     coordinates: {
@@ -67,7 +66,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Terra Kulture",
     state: "Lagos",
     city: "Victoria Island",
-    image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3?q=80&w=600",
+    image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=600",
     description: "A cultural center promoting Nigerian languages, arts, and culture through exhibitions, theater productions, and educational programs.",
     category: "gallery",
     coordinates: {
@@ -80,7 +79,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Kajuru Castle",
     state: "Kaduna",
     city: "Kajuru",
-    image: "https://images.unsplash.com/photo-1481277542470-605612bd2d61?q=80&w=600",
+    image: "https://images.unsplash.com/photo-1569411744750-42d2b5d8248e?q=80&w=600",
     description: "A medieval German-style castle built in the 1990s, offering stunning views of the surrounding hills and countryside.",
     category: "monument",
     coordinates: {
@@ -93,7 +92,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Ogbunike Caves",
     state: "Anambra",
     city: "Ogbunike",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600",
+    image: "https://images.unsplash.com/photo-1602910059933-42885f1c8a87?q=80&w=600",
     description: "A system of caves and tunnels created by erosion, holding cultural and spiritual significance for the local community.",
     category: "heritage",
     coordinates: {
@@ -106,7 +105,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Lekki Conservation Centre",
     state: "Lagos",
     city: "Lekki",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600",
+    image: "https://images.unsplash.com/photo-1584715642381-6f1c4b452b7b?q=80&w=600",
     description: "A nature reserve with diverse flora and fauna, featuring the longest canopy walkway in Africa.",
     category: "heritage",
     coordinates: {
@@ -119,7 +118,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "New Afrika Shrine",
     state: "Lagos",
     city: "Ikeja",
-    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=600",
+    image: "https://images.unsplash.com/photo-1571173729436-98de2c88a9a3?q=80&w=600",
     description: "Entertainment center established by Femi Kuti, preserving the legacy of Afrobeat pioneer Fela Kuti through live performances.",
     category: "monument",
     coordinates: {
@@ -129,6 +128,7 @@ const culturalSpots: CulturalSpot[] = [
   }
 ];
 
+// Complete list of Nigerian states 
 const nigerianStates = [
   "All States", "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", 
   "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "FCT", "Gombe", "Imo", "Jigawa", 
