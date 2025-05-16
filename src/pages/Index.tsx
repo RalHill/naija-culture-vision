@@ -5,16 +5,18 @@ import NewsSection from "@/components/NewsSection";
 import CulturalDirectory from "@/components/CulturalDirectory";
 import EventHighlights from "@/components/EventHighlights";
 import InvestmentHub from "@/components/InvestmentHub";
+import MapView from "@/components/MapView";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col pt-16">
       <Header />
       <main>
         <Hero />
         <NewsSection />
         <CulturalDirectory />
+        <MapView />
         <EventHighlights />
         <InvestmentHub />
       </main>
