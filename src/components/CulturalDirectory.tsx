@@ -118,7 +118,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "New Afrika Shrine",
     state: "Lagos",
     city: "Ikeja",
-    image: "https://visaliv.s3.ap-south-1.amazonaws.com/New-Afrika-Shrine-Nigeria.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Fela_New_Shrine%2C_Lagos_02.jpg",
     description: "Entertainment center established by Femi Kuti, preserving the legacy of Afrobeat pioneer Fela Kuti through live performances.",
     category: "monument",
     coordinates: {
