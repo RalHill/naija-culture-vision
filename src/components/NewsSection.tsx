@@ -63,10 +63,10 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 6,
-    title: "New Tax Incentives for Cultural Investments",
-    excerpt: "Federal Government announces new tax incentives for investors in Nigeria's cultural and creative sectors to boost economic growth...",
-    date: "October 18, 2023",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600",
+    title: "Sanwo-Olu’s aide appreciates Nigerians in diaspora for visiting Lagos",
+    excerpt: "Idris Aregbe, special adviser to Governor Babajide Sanwo-Olu on tourism, arts, and culture, has appreciated Nigerians in the diaspora for choosing Lagos as their destination for tourism and business...",
+    date: "December 18, 2024",
+    image: "https://images.unsplash.com/photo-1578532570381-266569761d1d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "economy",
     isHighlighted: false
   }
