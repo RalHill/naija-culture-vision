@@ -36,10 +36,10 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 3,
-    title: "Diaspora Investment Drive in Tourism",
-    excerpt: "A new initiative aims to attract diaspora investments in Nigeria's growing tourism sector with attractive incentives and strategic partnerships...",
-    date: "October 5, 2023",
-    image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?q=80&w=600",
+    title: "Nigeria seeks to grow December reveler jamboree boosting tourism",
+    excerpt: "Nigeria is seeking to capitalize off an end-of-year extravaganza that’s become the most profitable month for its commercial capital’s tourism sector in a bid to grow the economy...",
+    date: "October 5, 2024",
+    image: "https://images.unsplash.com/photo-1719314313652-d9835e0c52c3?q=80&w=2890&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "diaspora",
     isHighlighted: true
   },
