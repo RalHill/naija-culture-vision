@@ -27,7 +27,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Nike Art Gallery",
     state: "Lagos",
     city: "Lekki",
-    image: "https://images.unsplash.com/photo-1594733114071-bcbf0d7323bf?q=80&w=600",
+    image: "https://core.colorsxstudios.com/wp-content/uploads/2022/07/15A8793.jpg",
     description: "Home to thousands of artworks from renowned and emerging Nigerian artists across various mediums including paintings, sculptures, and textiles.",
     category: "gallery",
     coordinates: {
