@@ -55,8 +55,8 @@ const events: Event[] = [
   {
     id: 1,
     title: "Afro Nation Nigeria",
-    startDate: "December 15, 2023",
-    endDate: "December 17, 2023",
+    startDate: "December 19, 2023",
+    endDate: "December 20, 2023",
     time: "4:00 PM",
     location: {
       city: "Lagos",
