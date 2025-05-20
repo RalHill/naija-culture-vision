@@ -21,7 +21,7 @@ const newsItems: NewsItem[] = [
     title: "Anthony Joshua holds 'Tales by Moonlight' session at J Randle Centre for Yoruba History",
     excerpt: "Former two-time world heavyweight boxing champion, Anthony Joshua, on Thursday visited the John Randle Centre for Yoruba Culture and History in Lagos...",
     date: "January 2, 2023",
-    image: "https://image.api.sportal365.com/process//smp-images-production/pulse.ng/02012025/5c3ee9ad-847b-47be-91e3-89f3de0ad623.jpg?operations=autocrop(1042:580)",
+    image: "https://sportal365images.com/process/smp-images-production/pulse.ng/02012025/5c3ee9ad-847b-47be-91e3-89f3de0ad623.jpg",
     category: "culture",
     isHighlighted: true
   },
