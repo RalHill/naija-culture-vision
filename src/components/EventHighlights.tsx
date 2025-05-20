@@ -63,7 +63,7 @@ const events: Event[] = [
       venue: "Eko Atlantic City",
       state: "Lagos"
     },
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=600",
+    image: "https://thebounce.net/wp-content/uploads/2023/10/B242375E-54A5-40D8-9CE4-937F86D18156.png",
     description: "Africa's biggest afrobeats festival comes to Nigeria with a star-studded lineup of local and international artists.",
     category: "music",
     ticketTiers: [
@@ -86,7 +86,7 @@ const events: Event[] = [
       venue: "New Afrika Shrine",
       state: "Lagos"
     },
-    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&w=600",
+    image: "https://www.thecable.ng/wp-content/uploads/2024/05/FELABRATION-2024.jpg",
     description: "Annual festival commemorating the life and legacy of Afrobeat pioneer Fela Kuti with performances by top artists.",
     category: "music",
     ticketTiers: [
@@ -106,7 +106,7 @@ const events: Event[] = [
       venue: "Tafawa Balewa Square",
       state: "Lagos"
     },
-    image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?q=80&w=600",
+    image: "https://blog.fusion.ng/wp-content/uploads/2024/11/the-experience-lagos.jpg",
     description: "Africa's largest gospel music concert featuring international and local gospel artists.",
     category: "music",
     ticketTiers: [
@@ -119,8 +119,8 @@ const events: Event[] = [
   {
     id: 4,
     title: "Art X Lagos",
-    startDate: "November 3, 2023",
-    endDate: "November 5, 2023",
+    startDate: "November 4, 2022",
+    endDate: "November 6, 2022",
     time: "10:00 AM",
     location: {
       city: "Lagos",
@@ -149,7 +149,7 @@ const events: Event[] = [
       venue: "Calabar Cultural Centre",
       state: "Cross River"
     },
-    image: "https://images.unsplash.com/photo-1481277542470-605612bd2d61?q=80&w=600",
+    image: "https://theafricanhobo.wordpress.com/wp-content/uploads/2021/03/rotated-text-iphone-layout-e1615152868216.png?w=1400",
     description: "Africa's biggest street party with colorful costumes, music, and dance celebrations.",
     category: "festival",
     ticketTiers: [
@@ -171,7 +171,7 @@ const events: Event[] = [
       venue: "Argungu River",
       state: "Kebbi"
     },
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600",
+    image: "https://diplomaticwatch.com/wp-content/uploads/2023/03/images-5.jpeg",
     description: "Historic cultural festival featuring traditional fishing competition, agricultural fair, and cultural displays.",
     category: "culture",
     ticketTiers: [
