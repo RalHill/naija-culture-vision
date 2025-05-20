@@ -5,6 +5,7 @@ import NewsSection from "@/components/NewsSection";
 import CulturalDirectory from "@/components/CulturalDirectory";
 import EventHighlights from "@/components/EventHighlights";
 import InvestmentHub from "@/components/InvestmentHub";
+import LoanMarketplace from "@/components/LoanMarketplace";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
         <CulturalDirectory />
         <EventHighlights />
         <InvestmentHub />
+        <LoanMarketplace />
       </main>
       <Footer />
     </div>
