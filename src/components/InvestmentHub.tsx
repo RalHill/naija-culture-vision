@@ -160,6 +160,21 @@ const investments: Investment[] = [
       percentage: 30
     },
     featured: true
+  },
+  {
+    id: 9,
+    title: "Lagos Island Cultural District",
+    sector: "Real Estate",
+    icon: "Building",
+    summary: "Urban renewal project to transform part of Lagos Island into a vibrant cultural and entertainment district.",
+    location: "Lagos Island, Lagos",
+    state: "Lagos",
+    investmentSize: "large",
+    roi: {
+      timeframe: "7-10 years",
+      percentage: 30
+    },
+    featured: true
   }
 ];
 
