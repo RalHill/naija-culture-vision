@@ -40,7 +40,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "National Museum",
     state: "Lagos",
     city: "Onikan",
-    image: "https://images.unsplash.com/photo-1554907984-89a3d7e84f1a?q=80&w=600",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/2d/c9/c2/the-national-museum.jpg?w=1200&h=-1&s=1",
     description: "Preserving Nigeria's cultural heritage with artifacts spanning centuries, including the famous Benin Bronzes and Nok terracottas.",
     category: "museum",
     coordinates: {
@@ -53,7 +53,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Osun Sacred Grove",
     state: "Osun",
     city: "Osogbo",
-    image: "https://images.unsplash.com/photo-1526489550178-7bd5d9944e4f?q=80&w=600",
+    image: "https://rexclarkeadventures.com/wp-content/uploads/2024/08/smocontemporaryart-kelechi-amadi-obi-osun-osogbo-sacred-grove-iv-2022.jpg",
     description: "UNESCO World Heritage site dedicated to the goddess of fertility, featuring ancient sculptures and sacred shrines within pristine forest.",
     category: "heritage",
     coordinates: {
@@ -66,7 +66,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Terra Kulture",
     state: "Lagos",
     city: "Victoria Island",
-    image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=600",
+    image: "https://terrakulture.com/wp-content/uploads/2023/03/IMG_2574.jpg",
     description: "A cultural center promoting Nigerian languages, arts, and culture through exhibitions, theater productions, and educational programs.",
     category: "gallery",
     coordinates: {
@@ -79,7 +79,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Kajuru Castle",
     state: "Kaduna",
     city: "Kajuru",
-    image: "https://images.unsplash.com/photo-1569411744750-42d2b5d8248e?q=80&w=600",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/3b/ef/23/20171002-081326-largejpg.jpg?w=900&h=500&s=1",
     description: "A medieval German-style castle built in the 1990s, offering stunning views of the surrounding hills and countryside.",
     category: "monument",
     coordinates: {
@@ -92,7 +92,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Ogbunike Caves",
     state: "Anambra",
     city: "Ogbunike",
-    image: "https://images.unsplash.com/photo-1602910059933-42885f1c8a87?q=80&w=600",
+    image: "https://rexclarkeadventures.com/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-15-at-4.34.04-PM.jpeg",
     description: "A system of caves and tunnels created by erosion, holding cultural and spiritual significance for the local community.",
     category: "heritage",
     coordinates: {
@@ -105,7 +105,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "Lekki Conservation Centre",
     state: "Lagos",
     city: "Lekki",
-    image: "https://images.unsplash.com/photo-1584715642381-6f1c4b452b7b?q=80&w=600",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/56/f6/d9/the-swaying-of-the-walkways.jpg?w=800&h=500&s=1",
     description: "A nature reserve with diverse flora and fauna, featuring the longest canopy walkway in Africa.",
     category: "heritage",
     coordinates: {
@@ -118,7 +118,7 @@ const culturalSpots: CulturalSpot[] = [
     name: "New Afrika Shrine",
     state: "Lagos",
     city: "Ikeja",
-    image: "https://images.unsplash.com/photo-1571173729436-98de2c88a9a3?q=80&w=600",
+    image: "https://visaliv.s3.ap-south-1.amazonaws.com/New-Afrika-Shrine-Nigeria.jpg",
     description: "Entertainment center established by Femi Kuti, preserving the legacy of Afrobeat pioneer Fela Kuti through live performances.",
     category: "monument",
     coordinates: {
