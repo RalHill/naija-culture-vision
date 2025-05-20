@@ -93,10 +93,10 @@ const LoanMarketplace = () => {
     <section id="loans" className="py-16 px-4 bg-white">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-2 text-naija-green">
-          💸 Microloans for Creators, Vendors, and Cultural Entrepreneurs
+           Microloans for Creators, Vendors, and Cultural Entrepreneurs
         </h2>
         <p className="text-center text-gray-700 max-w-3xl mx-auto mb-8">
-          Access verified microloans to fund your next event, restock materials, rent a gallery, or transport performers — all tailored for Lagos' creative economy.
+          Access verified microloans to fund your next event, restock materials, rent a gallery, or transport performers.
         </p>
 
         {/* Filter Chips */}
@@ -168,7 +168,7 @@ const LoanMarketplace = () => {
               variant="outline" 
               className="border-naija-green text-naija-green hover:bg-naija-green hover:text-white"
             >
-              🔗 View All Financial Services <ArrowRight className="h-4 w-4" />
+               View All Financial Services <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
         </div>
