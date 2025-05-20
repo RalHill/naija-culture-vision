@@ -55,9 +55,9 @@ const newsItems: NewsItem[] = [
   {
     id: 5,
     title: "Nigeria Hosts International Tourism Summit",
-    excerpt: "Lagos is set to host the International Tourism Summit bringing together stakeholders from across Africa to discuss sustainable tourism development...",
+    excerpt: "Oyo is set to host the International Tourism Summit bringing together stakeholders from across Africa to discuss sustainable tourism development...",
     date: "October 20, 2023",
-    image: "https://images.unsplash.com/photo-1481277542470-605612bd2d61?q=80&w=600",
+    image: "https://seyimakinde.com/wp-content/uploads/2024/04/ITSOyoState2024-Jesse-35-1024x683.webp",
     category: "tourism",
     isHighlighted: true
   },
