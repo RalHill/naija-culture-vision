@@ -39,7 +39,7 @@ const newsItems: NewsItem[] = [
     title: "Nigeria seeks to grow December reveler jamboree boosting tourism",
     excerpt: "Nigeria is seeking to capitalize off an end-of-year extravaganza that’s become the most profitable month for its commercial capital’s tourism sector in a bid to grow the economy...",
     date: "October 5, 2024",
-    image: "https://images.unsplash.com/photo-1719314313652-d9835e0c52c3?q=80&w=2890&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1649502913092-fb7f0e8fc632?q=80&w=2159&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "diaspora",
     isHighlighted: true
   },
