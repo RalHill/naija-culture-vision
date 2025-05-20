@@ -27,10 +27,10 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 2,
-    title: "FG Launches National Art Directory",
-    excerpt: "The Federal Government has launched a comprehensive national art directory to catalog and promote Nigeria's diverse artistic talents and cultural institutions...",
+    title: "Lagos generated $71.6m from December tourism festivities",
+    excerpt: "The Lagos State Government has announced that it generated over $71.6 million in revenue from tourism, hospitality, and entertainment during the 2024 ‘Detty December’ celebrations...",
     date: "September 28, 2023",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=600",
+    image: "https://cdn.punchng.com/wp-content/uploads/2024/09/27093430/Idris-Aregbe.jpg",
     category: "culture",
     isHighlighted: false
   },
