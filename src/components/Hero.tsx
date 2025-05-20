@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building, Calendar, Flag } from "lucide-react";
+import { ArrowRight, Building, Calendar, Flag, Wallet } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
             Explore. Attend. Invest.
           </p>
           
-          <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col md:flex-row gap-4 justify-center flex-wrap mb-12">
             <Button 
               className="bg-naija-green hover:bg-naija-green/90 text-white flex items-center gap-2 px-6"
               size="lg"
@@ -54,6 +55,17 @@ const Hero = () => {
               View Opportunities
               <ArrowRight className="h-4 w-4" />
             </Button>
+
+            <Link to="/financial">
+              <Button 
+                className="bg-naija-green/80 hover:bg-naija-green/90 text-white flex items-center gap-2 px-6"
+                size="lg"
+              >
+                <Wallet className="h-5 w-5" />
+                Financial Services
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </div>
           
           <div className="flex items-center justify-center gap-3">
