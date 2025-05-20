@@ -18,10 +18,10 @@ interface NewsItem {
 const newsItems: NewsItem[] = [
   {
     id: 1,
-    title: "Calabar Carnival Returns",
-    excerpt: "After a brief hiatus, the spectacular Calabar Carnival is set to make a grand return this December with enhanced cultural displays and international participants...",
-    date: "October 15, 2023",
-    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&w=600",
+    title: "Anthony Joshua holds 'Tales by Moonlight' session at J Randle Centre for Yoruba History",
+    excerpt: "Former two-time world heavyweight boxing champion, Anthony Joshua, on Thursday visited the John Randle Centre for Yoruba Culture and History in Lagos...",
+    date: "January 2, 2023",
+    image: "https://image.api.sportal365.com/process//smp-images-production/pulse.ng/02012025/5c3ee9ad-847b-47be-91e3-89f3de0ad623.jpg?operations=autocrop(1042:580)",
     category: "culture",
     isHighlighted: true
   },
