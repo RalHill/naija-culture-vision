@@ -45,10 +45,10 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 4,
-    title: "National Theatre Renovation Complete",
-    excerpt: "The iconic National Theatre in Lagos has completed its renovation, preparing to host world-class cultural events and performances...",
-    date: "October 10, 2023",
-    image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3?q=80&w=600",
+    title: "Engaging youths through creative art, way to go – Aregbe",
+    excerpt: "Mr Idris Aregbe, Special Adviser to the governor on Tourism Arts and Culture, disclosed this at a news conference to launch the initiative at the Lekki Creative Arts and Crafts Market, on Friday....",
+    date: "November 10, 2024",
+    image: "https://cdn.vanguardngr.com/wp-content/uploads/2024/03/Babajide-Sanwo-olu.webp",
     category: "heritage",
     isHighlighted: false
   },
