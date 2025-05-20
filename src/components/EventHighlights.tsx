@@ -127,7 +127,7 @@ const events: Event[] = [
       venue: "Federal Palace Hotel",
       state: "Lagos"
     },
-    image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3?q=80&w=600",
+    image: "https://www.bellanaija.com/wp-content/uploads/2022/11/D32D301A-B495-4E7D-90E3-08A16661C648.jpeg",
     description: "West Africa's premier international art fair showcasing contemporary art from Africa and its diaspora.",
     category: "art",
     ticketTiers: [
