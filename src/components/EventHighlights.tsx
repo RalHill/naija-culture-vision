@@ -63,7 +63,7 @@ const events: Event[] = [
       venue: "Eko Atlantic City",
       state: "Lagos"
     },
-    image: "https://thebounce.net/wp-content/uploads/2023/09/59F7B587-F5F9-4100-90E6-EC6430FD4520.png",
+    image: "https://thebounce.net/wp-content/uploads/2023/06/CF9CFFC5-8B69-4ECE-A0C3-01730BCF69D9.png",
     description: "Africa's biggest afrobeats festival comes to Nigeria with a star-studded lineup of local and international artists.",
     category: "music",
     ticketTiers: [
