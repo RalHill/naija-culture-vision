@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="h-12 w-12 rounded-full bg-naija-green flex items-center justify-center">
               <span className="text-white font-bold">NC</span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-naija-green">NaijaCulture<span className="text-naija-gold">360</span></h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-naija-green">LagosWave<span className="text-naija-gold">360</span></h1>
           </div>
           
           <p className="text-xl md:text-2xl font-medium text-gray-700 mb-8 max-w-xl mx-auto">
