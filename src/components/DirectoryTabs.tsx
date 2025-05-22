@@ -1,8 +1,7 @@
-
 import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import { Landmark, Utensils, Building, Coffee, Calendar } from "lucide-react";
+import { Landmark, Utensils, Building, Coffee, Calendar, Car } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Map } from "lucide-react";
@@ -42,6 +41,12 @@ export const DIRECTORY_CATEGORIES = [
     name: "Event Hall Bookings",
     icon: Calendar,
     description: "Venues and halls available for events, conferences and celebrations"
+  },
+  {
+    id: "car-rentals",
+    name: "Car Rentals",
+    icon: Car,
+    description: "Car rental services for business, leisure, and special occasions in Lagos"
   }
 ];
 
@@ -274,6 +279,50 @@ const LISTINGS = {
       location: "Lekki, Lagos",
       description: "Contemporary event space with premium interior and amenities.",
       image: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=800"
+    }
+  ],
+  "car-rentals": [
+    {
+      id: 1,
+      name: "Gova Car Rental",
+      location: "Lekki Phase 1, Lagos",
+      description: "Premium car hire service offering sedans, SUVs, and chauffeurs.",
+      image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800"
+    },
+    {
+      id: 2,
+      name: "Drip Ride Rentals",
+      location: "Victoria Island, Lagos",
+      description: "Stylish rental fleet with luxury cars for events, weddings, and business travel.",
+      image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=800"
+    },
+    {
+      id: 3,
+      name: "Swift Ride Nigeria",
+      location: "Ikeja GRA, Lagos",
+      description: "Affordable and reliable daily car rental for city commutes and airport transfers.",
+      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800"
+    },
+    {
+      id: 4,
+      name: "HireFleet Autos",
+      location: "Surulere, Lagos",
+      description: "Offers flexible short-term and long-term leasing options for individuals and corporates.",
+      image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800"
+    },
+    {
+      id: 5,
+      name: "Jautos Rentals",
+      location: "Ajah, Lagos",
+      description: "Well-maintained private vehicles with delivery and pickup services included.",
+      image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=800"
+    },
+    {
+      id: 6,
+      name: "Zido Cars",
+      location: "Yaba, Lagos",
+      description: "Tech-enabled rental company with booking via app and 24/7 customer support.",
+      image: "https://images.unsplash.com/photo-1581697008066-53314e396f92?q=80&w=800"
     }
   ]
 };
