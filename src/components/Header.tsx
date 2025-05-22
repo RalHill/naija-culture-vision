@@ -19,14 +19,14 @@ const Header = () => {
             <div className="h-8 w-8 rounded-full bg-naija-green flex items-center justify-center">
               <span className="text-white font-bold text-xs">LW</span>
             </div>
-            <h1 className="text-xl font-bold text-naija-green">Lagos Wave360</h1>
+            <h1 className="text-xl font-bold text-naija-green">LagosWave360</h1>
           </Link>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
           <Link to="/" className="text-gray-600 hover:text-naija-green font-medium text-sm">Home</Link>
           <a href="#news" className="text-gray-600 hover:text-naija-green font-medium text-sm">News</a>
-          <a href="#directory" className="text-gray-600 hover:text-naija-green font-medium text-sm">Directory</a>
+          <Link to="/directory" className="text-gray-600 hover:text-naija-green font-medium text-sm">Directory</Link>
           <a href="#events" className="text-gray-600 hover:text-naija-green font-medium text-sm">Events</a>
           <a href="#investment" className="text-gray-600 hover:text-naija-green font-medium text-sm">Investment</a>
           <Link to="/financial" className="text-gray-600 hover:text-naija-green font-medium text-sm">Financial Services</Link>
@@ -51,7 +51,7 @@ const Header = () => {
           <nav className="flex flex-col space-y-6 py-8">
             <Link to="/" className="text-gray-600 hover:text-naija-green font-medium text-lg" onClick={toggleMenu}>Home</Link>
             <a href="#news" className="text-gray-600 hover:text-naija-green font-medium text-lg" onClick={toggleMenu}>News</a>
-            <a href="#directory" className="text-gray-600 hover:text-naija-green font-medium text-lg" onClick={toggleMenu}>Directory</a>
+            <Link to="/directory" className="text-gray-600 hover:text-naija-green font-medium text-lg" onClick={toggleMenu}>Directory</Link>
             <a href="#events" className="text-gray-600 hover:text-naija-green font-medium text-lg" onClick={toggleMenu}>Events</a>
             <a href="#investment" className="text-gray-600 hover:text-naija-green font-medium text-lg" onClick={toggleMenu}>Investment</a>
             <Link to="/financial" className="text-gray-600 hover:text-naija-green font-medium text-lg" onClick={toggleMenu}>Financial Services</Link>

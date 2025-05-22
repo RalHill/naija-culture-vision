@@ -10,7 +10,7 @@ const BottomNav = () => {
           <Newspaper className="h-5 w-5 text-gray-600" />
           <span className="text-xs mt-1 text-gray-600">News</span>
         </Link>
-        <Link to="/#directory" className="flex flex-col items-center justify-center w-1/5 py-1">
+        <Link to="/directory" className="flex flex-col items-center justify-center w-1/5 py-1">
           <MapPin className="h-5 w-5 text-gray-600" />
           <span className="text-xs mt-1 text-gray-600">Directory</span>
         </Link>

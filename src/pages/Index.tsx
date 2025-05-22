@@ -9,6 +9,9 @@ import LoanMarketplace from "@/components/LoanMarketplace";
 import Footer from "@/components/Footer";
 import BottomNav from "@/components/BottomNav";
 import { SearchBar } from "@/components/SearchBar";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -23,6 +26,16 @@ const Index = () => {
         </div>
         <Hero />
         <NewsSection />
+        
+        {/* Link to full directory */}
+        <div className="container mx-auto my-4 px-4">
+          <Link to="/directory">
+            <Button variant="outline" className="flex items-center gap-2 border-naija-green text-naija-green hover:bg-naija-lightgreen float-right">
+              Explore Full Lagos Directory <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+        
         <CulturalDirectory />
         <EventHighlights />
         <InvestmentHub />
