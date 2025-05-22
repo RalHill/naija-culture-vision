@@ -3,18 +3,18 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer className="bg-naija-green text-white">
+    <footer className="bg-naija-green text-white pb-16 md:pb-6">
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center">
-                <span className="text-naija-green font-bold">NC</span>
+                <span className="text-naija-green font-bold">LW</span>
               </div>
-              <h3 className="text-xl font-bold">NaijaCulture<span className="text-naija-gold">360</span></h3>
+              <h3 className="text-xl font-bold">Lagos<span className="text-naija-gold">Wave360</span></h3>
             </div>
             <p className="text-gray-200 mb-4">
-              Nigeria's premier platform for tourism, culture, and investment opportunities.
+              Lagos's premier platform for tourism, culture, and investment opportunities.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-white hover:text-naija-gold">
@@ -40,7 +40,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-200 hover:text-naija-gold">Home</a></li>
               <li><a href="#news" className="text-gray-200 hover:text-naija-gold">News & Insights</a></li>
-              <li><a href="#directory" className="text-gray-200 hover:text-naija-gold">Cultural Directory</a></li>
+              <li><a href="#directory" className="text-gray-200 hover:text-naija-gold">Directory</a></li>
               <li><a href="#events" className="text-gray-200 hover:text-naija-gold">Event Highlights</a></li>
               <li><a href="#investment" className="text-gray-200 hover:text-naija-gold">Investment Hub</a></li>
             </ul>
@@ -73,8 +73,8 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} NaijaCulture360. All rights reserved.</p>
-          <p className="text-sm mt-2">A Federal Ministry of Information and Culture Initiative</p>
+          <p>&copy; {new Date().getFullYear()} Lagos Wave360. All rights reserved.</p>
+          <p className="text-sm mt-2">A Lagos State Ministry of Tourism Initiative</p>
         </div>
       </div>
     </footer>

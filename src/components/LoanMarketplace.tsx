@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface LoanProvider {
@@ -13,6 +13,7 @@ interface LoanProvider {
   tenor: string;
   useCases: string[];
   applyUrl: string;
+  rating: number;
 }
 
 const loanProviders: LoanProvider[] = [
@@ -23,7 +24,8 @@ const loanProviders: LoanProvider[] = [
     interestRate: "2.5% – 30% monthly",
     tenor: "2 – 24 months",
     useCases: ["Event Hosting", "Equipment Purchase", "Vendor Stock"],
-    applyUrl: "https://fairmoney.io/products/personal-loans"
+    applyUrl: "https://fairmoney.io/products/personal-loans",
+    rating: 4.3
   },
   {
     id: 2,
@@ -32,7 +34,8 @@ const loanProviders: LoanProvider[] = [
     interestRate: "14% – 24% APR",
     tenor: "14 – 180 days",
     useCases: ["Transport", "Vendor Stock"],
-    applyUrl: "https://play.google.com/store/apps/details?id=com.transsnetfinancial.palmcredit"
+    applyUrl: "https://play.google.com/store/apps/details?id=com.transsnetfinancial.palmcredit",
+    rating: 4.1
   },
   {
     id: 3,
@@ -41,7 +44,8 @@ const loanProviders: LoanProvider[] = [
     interestRate: "4.5% – 30% monthly",
     tenor: "61 – 365 days",
     useCases: ["Gallery Rentals", "Equipment"],
-    applyUrl: "https://getcarbon.co/"
+    applyUrl: "https://getcarbon.co/",
+    rating: 4.5
   },
   {
     id: 4,
@@ -50,7 +54,8 @@ const loanProviders: LoanProvider[] = [
     interestRate: "3% – 23% monthly",
     tenor: "62 – 365 days",
     useCases: ["Event Hosting", "Transport"],
-    applyUrl: "https://branch.co/"
+    applyUrl: "https://branch.co/",
+    rating: 4.2
   },
   {
     id: 5,
@@ -59,7 +64,8 @@ const loanProviders: LoanProvider[] = [
     interestRate: "4% – 29% monthly",
     tenor: "60 – 180 days",
     useCases: ["Vendor Stock", "Equipment"],
-    applyUrl: "https://aellaapp.com/"
+    applyUrl: "https://aellaapp.com/",
+    rating: 3.9
   },
   {
     id: 6,
@@ -68,7 +74,8 @@ const loanProviders: LoanProvider[] = [
     interestRate: "5% – 30% monthly",
     tenor: "91 – 365 days",
     useCases: ["Event Hosting", "Equipment"],
-    applyUrl: "https://www.quickcheck.ng/"
+    applyUrl: "https://www.quickcheck.ng/",
+    rating: 4.0
   }
 ];
 
@@ -80,6 +87,37 @@ const useCaseCategories = [
   "Transport",
   "Gallery Rentals"
 ];
+
+// Helper component for star ratings
+const StarRating = ({ rating }: { rating: number }) => {
+  const stars = [];
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= fullStars) {
+      stars.push(<Star key={i} className="h-4 w-4 fill-naija-gold text-naija-gold" />);
+    } else if (i === fullStars + 1 && hasHalfStar) {
+      stars.push(
+        <div key={i} className="relative">
+          <Star className="h-4 w-4 text-gray-300" />
+          <div className="absolute top-0 left-0 w-1/2 overflow-hidden">
+            <Star className="h-4 w-4 fill-naija-gold text-naija-gold" />
+          </div>
+        </div>
+      );
+    } else {
+      stars.push(<Star key={i} className="h-4 w-4 text-gray-300" />);
+    }
+  }
+
+  return (
+    <div className="flex items-center gap-1">
+      {stars}
+      <span className="text-sm font-medium text-gray-600 ml-1">{rating.toFixed(1)}</span>
+    </div>
+  );
+};
 
 const LoanMarketplace = () => {
   const [activeFilter, setActiveFilter] = useState<string>("All");
@@ -117,40 +155,44 @@ const LoanMarketplace = () => {
           ))}
         </div>
 
-        {/* Loan Cards Grid */}
+        {/* Loan Cards Grid - TripAdvisor Style */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {filteredProviders.map((provider) => (
-            <Card key={provider.id} className="border shadow-sm hover:shadow-md transition-all">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">{provider.name}</h3>
-                
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 font-medium">Loan Range:</span>
-                    <span className="font-medium">{provider.loanAmount}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 font-medium">Interest:</span>
-                    <span className="font-medium">{provider.interestRate}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 font-medium">Tenor:</span>
-                    <span className="font-medium">{provider.tenor}</span>
-                  </div>
-                  
-                  <div>
-                    <span className="text-gray-600 font-medium">Use Case:</span>
-                    <div className="flex flex-wrap gap-1 mt-1">
-                      {provider.useCases.map((useCase, index) => (
-                        <span key={index} className="inline-flex items-center text-xs bg-naija-lightgreen text-naija-green rounded px-2 py-1">
-                          {useCase}
-                        </span>
-                      ))}
+            <Card key={provider.id} className="bg-white border shadow-sm hover:shadow-md transition-all overflow-hidden">
+              <CardContent className="p-0">
+                <div className="bg-naija-lightgreen p-4 flex justify-between items-center">
+                  <h3 className="font-semibold">{provider.name}</h3>
+                  <StarRating rating={provider.rating} />
+                </div>
+                <div className="p-6">
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600 font-medium">Loan Range:</span>
+                      <span className="font-medium">{provider.loanAmount}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600 font-medium">Interest:</span>
+                      <span className="font-medium">{provider.interestRate}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600 font-medium">Tenor:</span>
+                      <span className="font-medium">{provider.tenor}</span>
+                    </div>
+                    
+                    <div>
+                      <span className="text-gray-600 font-medium">Use Case:</span>
+                      <div className="flex flex-wrap gap-1 mt-1">
+                        {provider.useCases.map((useCase, index) => (
+                          <span key={index} className="inline-flex items-center text-xs bg-naija-lightgreen text-naija-green rounded px-2 py-1">
+                            {useCase}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="pt-0 pb-6 px-6">
+              <CardFooter className="bg-gray-50 border-t p-4">
                 <a href={provider.applyUrl} target="_blank" rel="noopener noreferrer" className="w-full">
                   <Button className="w-full bg-naija-green hover:bg-naija-green/90 text-white flex items-center justify-center gap-2">
                     Apply Now <ArrowRight className="h-4 w-4" />

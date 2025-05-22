@@ -13,13 +13,13 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto py-4 px-4 flex items-center justify-between">
+      <div className="container mx-auto py-3 px-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-full bg-naija-green flex items-center justify-center">
-              <span className="text-white font-bold text-xs">NC</span>
+              <span className="text-white font-bold text-xs">LW</span>
             </div>
-            <h1 className="text-xl font-bold text-naija-green">NaijaCulture360</h1>
+            <h1 className="text-xl font-bold text-naija-green">Lagos Wave360</h1>
           </Link>
         </div>
         
@@ -41,7 +41,7 @@ const Header = () => {
           className="md:hidden"
           onClick={toggleMenu}
         >
-          {isMenuOpen ? <X /> : <Menu />}
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
       </div>
       
